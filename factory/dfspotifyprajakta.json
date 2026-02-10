@@ -1,0 +1,9 @@
+{
+	"name": "dfspotifyprajakta",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "2ac64a3d-e6bb-4fc3-afda-16e162afb746",
+		"tenantId": "2b440a44-169f-4ea1-95c9-b18f04bd7f44"
+	}
+}
