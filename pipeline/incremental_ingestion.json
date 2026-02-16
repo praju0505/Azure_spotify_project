@@ -6,6 +6,8 @@
 				"name": "azureSQLToLake",
 				"description": "This activity is used to copy data from sql database to adls containers\nwe will use lookup activity to fetch cdc col last updated value",
 				"type": "Copy",
+				"state": "Inactive",
+				"onInactiveMarkAs": "Succeeded",
 				"dependsOn": [],
 				"policy": {
 					"timeout": "0.12:00:00",
@@ -61,7 +63,12 @@
 					},
 					"dataset": {
 						"referenceName": "ds_json_dynamic",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"container": "bronze",
+							"folder": "cdc",
+							"file": "cdc.json"
+						}
 					},
 					"firstRowOnly": false
 				}
